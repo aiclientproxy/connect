@@ -1,0 +1,37 @@
+{
+  "$schema": "../schema/provider.schema.json",
+  
+  "id": "example-relay",
+  "name": "示例中转站",
+  "description": "这是一个示例配置，请勿直接使用",
+  
+  "branding": {
+    "logo": "https://example.com/logo.png",
+    "color": "#6366f1"
+  },
+  
+  "links": {
+    "homepage": "https://example.com",
+    "register": "https://example.com/register",
+    "recharge": "https://example.com/recharge",
+    "docs": "https://docs.example.com",
+    "status": "https://status.example.com"
+  },
+  
+  "api": {
+    "base_url": "https://api.example.com/v1",
+    "protocol": "openai",
+    "auth_header": "Authorization",
+    "auth_prefix": "Bearer "
+  },
+  
+  "contact": {
+    "email": "support@example.com",
+    "telegram": "@example"
+  },
+  
+  "features": {
+    "streaming": true,
+    "models_endpoint": true
+  }
+}

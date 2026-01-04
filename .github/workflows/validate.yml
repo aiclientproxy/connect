@@ -1,0 +1,28 @@
+name: Validate Provider Config
+
+on:
+  pull_request:
+    paths:
+      - 'providers/*.json'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install dependencies
+        run: npm install ajv ajv-formats
+      
+      - name: Validate JSON Schema
+        run: |
+          node scripts/validate.js
+      
+      - name: Check API availability
+        run: |
+          node scripts/check-api.js
