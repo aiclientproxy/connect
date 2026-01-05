@@ -132,6 +132,19 @@
           "description": "是否提供 /models 端点"
         }
       }
+    },
+    "webhook": {
+      "type": "object",
+      "description": "统计回调配置（可选）。中转商通过检查 key_prefix 是否为自己下发的 Key 来验证请求。",
+      "properties": {
+        "callback_url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://",
+          "description": "回调地址，必须 HTTPS"
+        }
+      },
+      "required": ["callback_url"]
     }
   }
 }

@@ -1,0 +1,41 @@
+{
+  "$schema": "../schema/provider.schema.json",
+  
+  "id": "proxycast-mock",
+  "name": "ProxyCast Mock",
+  "description": "ProxyCast 本地测试供应商，返回模拟数据",
+  
+  "branding": {
+    "logo": "https://raw.githubusercontent.com/aiclientproxy/proxycast/main/src-tauri/icons/icon.png",
+    "color": "#10B981"
+  },
+  
+  "links": {
+    "homepage": "https://github.com/aiclientproxy/proxycast",
+    "register": "https://proxycast.dev/mock/register",
+    "recharge": "https://proxycast.dev/mock/recharge",
+    "docs": "https://proxycast.dev/docs",
+    "status": "https://proxycast.dev/status"
+  },
+  
+  "api": {
+    "base_url": "https://httpbin.org",
+    "protocol": "openai",
+    "auth_header": "Authorization",
+    "auth_prefix": "Bearer "
+  },
+  
+  "contact": {
+    "email": "mock@proxycast.dev",
+    "telegram": "@proxycast_mock"
+  },
+  
+  "features": {
+    "streaming": true,
+    "models_endpoint": true
+  },
+  
+  "webhook": {
+    "callback_url": "https://httpbin.org/post"
+  }
+}
