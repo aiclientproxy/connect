@@ -1,0 +1,70 @@
+{
+  "version": "2026-01-05",
+  "updated_at": "2026-01-05T14:32:44.931Z",
+  "providers": [
+    {
+      "$schema": "../schema/provider.schema.json",
+      "id": "proxycast-mock",
+      "name": "ProxyCast Mock",
+      "description": "ProxyCast 本地测试供应商，返回模拟数据",
+      "branding": {
+        "logo": "https://raw.githubusercontent.com/aiclientproxy/proxycast/main/src-tauri/icons/icon.png",
+        "color": "#10B981"
+      },
+      "links": {
+        "homepage": "https://github.com/aiclientproxy/proxycast",
+        "register": "https://proxycast.dev/mock/register",
+        "recharge": "https://proxycast.dev/mock/recharge",
+        "docs": "https://proxycast.dev/docs",
+        "status": "https://proxycast.dev/status"
+      },
+      "api": {
+        "base_url": "https://httpbin.org",
+        "protocol": "openai",
+        "auth_header": "Authorization",
+        "auth_prefix": "Bearer "
+      },
+      "contact": {
+        "email": "mock@proxycast.dev",
+        "telegram": "@proxycast_mock"
+      },
+      "features": {
+        "streaming": true,
+        "models_endpoint": true
+      },
+      "webhook": {
+        "callback_url": "https://httpbin.org/post"
+      }
+    },
+    {
+      "$schema": "../schema/provider.schema.json",
+      "id": "proxycast-test",
+      "name": "ProxyCast Test",
+      "description": "ProxyCast 官方测试中转站，仅供开发测试使用",
+      "branding": {
+        "logo": "https://raw.githubusercontent.com/aiclientproxy/proxycast/main/src-tauri/icons/icon.png",
+        "color": "#3B82F6"
+      },
+      "links": {
+        "homepage": "https://github.com/aiclientproxy/proxycast",
+        "docs": "https://proxycast.dev/docs"
+      },
+      "api": {
+        "base_url": "https://api.openai.com/v1",
+        "protocol": "openai",
+        "auth_header": "Authorization",
+        "auth_prefix": "Bearer "
+      },
+      "contact": {
+        "email": "test@proxycast.dev"
+      },
+      "features": {
+        "streaming": true,
+        "models_endpoint": true
+      },
+      "webhook": {
+        "callback_url": "https://httpbin.org/post"
+      }
+    }
+  ]
+}
